@@ -1,7 +1,7 @@
 {
     "name": "karlis/module2",
     "version": "1.0.0",
-    "description": "A bit more complex module, with 2 models and dispatchable job",
+    "description": "A bit more complex module, with 2 models, dispatchable job etc",
     "type": "module",
     "autoload": {
         "psr-4": {
