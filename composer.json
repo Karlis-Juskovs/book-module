@@ -1,0 +1,32 @@
+{
+    "name": "karlis/module2",
+    "version": "1.0.0",
+    "description": "A bit more complex module, with 2 models and dispatchable job",
+    "type": "module",
+    "autoload": {
+        "psr-4": {
+            "Karlis\\Module2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KarlisJ",
+            "email": "karlis.juskovs@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^11.0",
+        "php": "^8.2",
+        "karlis/common-module": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Karlis-Juskovs/common-module"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "orchestra/testbench": "^9.5"
+    }
+}
