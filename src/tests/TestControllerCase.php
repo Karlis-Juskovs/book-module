@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
-abstract class TestControllerCase extends OrchestraTestCase
+abstract class TestControllerCase extends BaseTestCase
 {
     use RefreshDatabase;
 
@@ -16,12 +16,12 @@ abstract class TestControllerCase extends OrchestraTestCase
     // uncomment getPackageProviders method
     // and it will be possible to run tests on module1, while it's not attached to a full Laravel project
 
-    protected function getPackageProviders($app): array
-    {
-        return [
-            \Karlis\Module2\Module2ServiceProvider::class,
-        ];
-    }
+//    protected function getPackageProviders($app): array
+//    {
+//        return [
+//            \Karlis\Module2\Module2ServiceProvider::class,
+//        ];
+//    }
 
     protected function setUp(): void
     {
