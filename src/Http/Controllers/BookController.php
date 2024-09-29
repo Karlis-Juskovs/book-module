@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Karlis\Module2\Http\Requests\BookRequest;
+use Karlis\Module2\Jobs\GetLatestUsdCurrencyJob;
 use Karlis\Module2\Models\Book;
 use Karlis\Module2\Models\Currency;
 
@@ -56,5 +57,13 @@ class BookController extends Controller
         }
 
         return response()->json(['deleted' => $book]);
+    }
+
+    /**
+     * Method that will most likely be called by AJAX or something similar
+     */
+    public function dispatchUpdateCurrencyRatesJob(): void
+    {
+        GetLatestUsdCurrencyJob::dispatch();
     }
 }
