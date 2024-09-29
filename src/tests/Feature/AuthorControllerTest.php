@@ -12,7 +12,7 @@ class AuthorControllerTest extends TestControllerCase
     use WithFaker;
 
     /**
-     * Test index route (GET /author).
+     * Test index route (GET /authors).
      */
     public function testIndexReturnsAuthorsList(): void
     {
@@ -25,7 +25,7 @@ class AuthorControllerTest extends TestControllerCase
     }
 
     /**
-     * Test store route (POST /author).
+     * Test store route (POST /authors).
      */
     public function testStoreCreatesAnAuthor(): void
     {
@@ -38,12 +38,11 @@ class AuthorControllerTest extends TestControllerCase
         $response = $this->postJson(route('author.store'), $data);
 
         $response->assertCreated();
-
         $this->assertDatabaseHas('authors', $data);
     }
 
     /**
-     * Test show route (GET /author/{id}).
+     * Test show route (GET /authors/{id}).
      */
     public function testShowReturnsAuthorData(): void
     {
@@ -56,7 +55,7 @@ class AuthorControllerTest extends TestControllerCase
     }
 
     /**
-     * Test update route (PUT /author/{id}).
+     * Test update route (PUT /authors/{id}).
      */
     public function testUpdateModifiesAuthorData(): void
     {
@@ -71,7 +70,6 @@ class AuthorControllerTest extends TestControllerCase
         $response = $this->putJson(route('author.update', $author->id), $data);
 
         $response->assertOk();
-
         $this->assertDatabaseHas('authors', [
             'id' => $author->id,
             'full_name' => 'Updated Name',
@@ -80,7 +78,7 @@ class AuthorControllerTest extends TestControllerCase
     }
 
     /**
-     * Test destroy route (DELETE /author/{id}).
+     * Test destroy route (DELETE /authors/{id}).
      */
     public function testDestroyDeletesAnAuthor(): void
     {
@@ -89,7 +87,6 @@ class AuthorControllerTest extends TestControllerCase
         $response = $this->deleteJson(route('author.destroy', $author->id));
 
         $response->assertOk();
-
         $this->assertDatabaseMissing('authors', ['id' => $author->id]);
     }
 }

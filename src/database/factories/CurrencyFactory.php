@@ -12,6 +12,7 @@ class CurrencyFactory extends Factory
     public function definition(): array
     {
         return [
+            'eur_rate' => $this->faker->randomFloat(2, 0, 3),
             'usd_rate' => $this->faker->randomFloat(2, 0, 3),
             'created_at' => now(),
             'updated_at' => now(),

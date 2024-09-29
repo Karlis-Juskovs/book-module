@@ -18,7 +18,7 @@ class AuthorController extends Controller
 
     public function store(AuthorRequest $request): Author
     {
-        return Author::create($request->all());
+        return Author::create($request->validated());
     }
 
     public function show(int $id): JsonResponse
@@ -32,7 +32,7 @@ class AuthorController extends Controller
     {
         $author = Author::find($id);
         if ($author) {
-            $author->update($request->all());
+            $author->update($request->validated());
         }
 
         return $author;

@@ -1056,12 +1056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Karlis-Juskovs/common-module.git",
-                "reference": "d4f2ff597c57adbbe80be7c22298964031d63028"
+                "reference": "bec118f48f73544d22a540fb1b490378677fbd88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Karlis-Juskovs/common-module/zipball/d4f2ff597c57adbbe80be7c22298964031d63028",
-                "reference": "d4f2ff597c57adbbe80be7c22298964031d63028",
+                "url": "https://api.github.com/repos/Karlis-Juskovs/common-module/zipball/bec118f48f73544d22a540fb1b490378677fbd88",
+                "reference": "bec118f48f73544d22a540fb1b490378677fbd88",
                 "shasum": ""
             },
             "require": {
@@ -1086,7 +1086,7 @@
                 "source": "https://github.com/Karlis-Juskovs/common-module/tree/main",
                 "issues": "https://github.com/Karlis-Juskovs/common-module/issues"
             },
-            "time": "2024-09-28T12:42:15+00:00"
+            "time": "2024-09-29T09:58:07+00:00"
         },
         {
             "name": "laravel/framework",
