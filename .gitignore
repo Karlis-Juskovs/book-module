@@ -1,3 +1,4 @@
 # Ignore the vendor directory
 /vendor
 .phpunit.result.cache
+.idea

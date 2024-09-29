@@ -3,9 +3,9 @@
 namespace Karlis\Module2\tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Illuminate\Support\Facades\Artisan;
 
 abstract class TestControllerCase extends OrchestraTestCase
 {
