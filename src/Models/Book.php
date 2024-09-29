@@ -4,6 +4,7 @@ namespace Karlis\Module2\Models;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Karlis\Module2\database\factories\BookFactory;
 
 class Book extends Model
@@ -25,5 +26,13 @@ class Book extends Model
     protected static function newFactory(): BookFactory
     {
         return BookFactory::new();
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+    // Relationships
+    //------------------------------------------------------------------------------------------------------------------
+    public function author(): BelongsTo
+    {
+        return $this->belongsTo(Author::class);
     }
 }

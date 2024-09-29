@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title', 50);
             $table->string('description', 255);
-            $table->foreignId('author_id')->constrained('authors');
+            $table->foreignId('author_id')
+                ->constrained('authors');
             $table->date('release_date');
             $table->decimal('eur_price', 4, 2);
             $table->timestamps();
