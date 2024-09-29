@@ -17,7 +17,9 @@ class BookControllerTest extends TestControllerCase
      */
     public function testIndexReturnsBooksList(): void
     {
-        Book::newFactory()->count(3)->create();
+        $author = Author::newFactory()->create();
+
+        Book::newFactory()->count(3)->create(['author_id' => $author->id]);
 
         $response = $this->getJson(route('book.index'));
 
